@@ -247,6 +247,11 @@ To decouple classes we make use of Dependency Injection, by injecting dependenci
   <br/>
 </p>
 
+<p align="center">
+  <img src="images/clean-architecture-slice.jpeg">
+  <br/>
+</p>
+
 ## Shared Domain
 
 Now that we have decided about further splitting the code, the next question is how these domains are going to communicate with each other. So they can directly communicate with each other but that will yield in highly coupled domains and we don’t want that. We want to create such a system that these domains can be served as separate micro service in future so that we can scale these service independently of each other. 
