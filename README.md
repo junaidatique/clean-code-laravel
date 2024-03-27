@@ -1,15 +1,21 @@
-# Clean+ Architecture in Laravel (WIP)
+# Boring Architecture (WIP)
 
-The Clean Architecture concept, originally introduced by Robert C. Martin (Uncle Bob) over a decade ago, has seen widespread adoption in languages such as Java and C#. However, its integration is less prevalent among Laravel and PHP developers in general.
+```
+"Stick to boring architecture for as long as possible, and spend the majority of your time, and resources, building something your customers are willing to pay for." - Kelsey Hightower
+```
 
-As a software developer, I have always tried to explored ways to write code that is easily maintainable over an extended period. After successfully implementing Clean Architecture in PHP and NodeJs projects, I found it to be a promising approach. In my previous role, we applied Clean Architecture to Laravel along with combining best practices from various proven practices. In this repo, I'll try to explain all these practices on which I have hands on experience and found really promising. 
+The Clean Architecture concept, originally introduced by Robert C. Martin (Uncle Bob) over a decade ago, has seen widespread adoption in languages such as Java and C#. However, its integration is less prevalent among NodeJs and PHP developers in general.
 
-I've termed this approach "Clean+" (Clean Plus) Architecture because it integrates additional best practices from various sources, enhancing the foundational Clean Architecture.
+As a software developer, I have always tried to explore ways to write code that is easily maintainable over an extended period. After successfully implementing Clean Architecture in PHP and NodeJs projects, I found it to be a promising approach. 
 
-The ideas given below are not just about the architecture of the system. Its also about changing the mindset and a tought process to follow best and proven practices to have a successfull project. We only write production grade code that will go directly to production multiple times a day. 
+In last few years, I have applied Clean Architecture to Laravel and ExpressJs projects along with combining best practices from various proven practices. In this repo, I'll try to explain all these practices on which I have hands on experience and found really promising. 
+
+I've termed this approach "Boring" Architecture because in this repo I make a case that these stable, well-understood, well-adopted and tested tools and technologies are better than shining new technologies which has limited communicaty and adoptation. These methods, tools and technologies, that I am going to recommend, are well tested, have proven scalalblity and come with extensive documentation and community support. 
+
+The ideas given below are not just about the architecture of the system. Its also about changing the mindset and a tought process to follow best and proven practices to have a successfull project. By following tese practices, we only write production grade code that will go directly to production multiple times a day. 
 
 ## Problem Statement 
-So first lets discuss why do we even need clean architecutre. 
+So first lets discuss why do we even need this boring architecutre. 
 
 ### Scalable
 We need an architecutre which can help us to build large scale application. From large scale application we mean that the architecture support development of a project that will
@@ -20,7 +26,9 @@ We need an architecutre which can help us to build large scale application. From
 These timeframes are used only for reference, this basically means that its a large product. 
 
 ### Testable
-We need an architecture where we can easily write test cases. We aim to have more than 95% of code coverage. We need to create a system in which we can test the business rules without the UI, Database, Web Server, or any other external element.
+We need an architecture where we can easily write test cases. We aim to have more than 95% of code coverage. We need to create a system in which we can test the business rules without the UI, Database, Web Server, or any other external element. 
+
+Here this also means that the architecture itself help us to write better test cases. 
 
 ### Maintainable 
 We need an architecture where we can easily maintain over the lifetime of the project. Consider that you need to implement a feature in a two week sprint but now you have to maintain it for the lifetime of the project. So writing code is only 10% of the job whereas maintaining it is the 90% of the job. So we have our core focus on the maintainability of the code. 
@@ -116,7 +124,7 @@ The other one is from technology where we use events to trigger and communicate 
 
 # Implementation
 
-So from now on we’ll keep in mind all the principles that we have discussed previously and we’ll use the power of Laravel to implement those. 
+So from now on we’ll keep in mind all the principles that we have discussed previously. 
 
 ## Entities
 First of all let’s discuss about the Entities. The Entties conecept is present in both clean architecture and DDD. 
